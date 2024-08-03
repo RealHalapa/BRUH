@@ -4,16 +4,41 @@
         <title>
             Key cucc
         </title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                background-color: #f9f9f9;
+            }
+            h1 {
+                color: green;
+            }
+            .key-container {
+                background-color: #ffffff;
+                padding: 20px;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            }
+        </style>
     </head>
-     
     <body>
-        <h1 style = "color:green;">
-            Generated!
-        </h1> 
-         
-        <h2>Your key:</h2>
-        
-         
-        
+        <h1>Generated!</h1>
+        <div class="key-container">
+            <h2>Your key:</h2>
+            <script>
+                function generateRandomString(length) {
+                    const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+                    let result = '';
+                    for (let i = 0; i < length; i++) {
+                        result += characters.charAt(Math.floor(Math.random() * characters.length));
+                    }
+                    result += 'TgR';
+                    return result;
+                }
+
+                const randomKey = generateRandomString(21);
+                document.write(randomKey);
+            </script>
+        </div>
     </body>
-</html>   
+</html>
